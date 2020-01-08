@@ -9,7 +9,7 @@ steps:
     gradleWrapperFile: './gradlew'
     tasks: 'assemble'
     options: '-p distribution/archives/no-jdk-linux-tar -x :generateGlobalBuildInfo -x :printGlobalBuildInfo'
-    gradleOptions: '-Xmx3072m -Dbuild.docker=false -DcompilerJavaVersion=11'
+    gradleOptions: '-Xmx3072m'
     javaHomeOption: 'JDKVersion'
     jdkVersionOption: '1.11'
     jdkArchitectureOption: 'x64'
