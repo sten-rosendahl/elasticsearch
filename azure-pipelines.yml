@@ -4,6 +4,9 @@ trigger:
 pool:
   vmImage: 'ubuntu-latest'
 steps:
+- task: JavaToolInstaller@0
+  inputs:
+    versionSpec: '11'
 - task: Gradle@2
   inputs:
     tasks: 'assemble'
