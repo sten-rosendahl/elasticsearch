@@ -6,8 +6,8 @@ pool:
 steps:
 - task: Gradle@2
   inputs:
+    gradleWrapperFile: './gradlew'
     tasks: 'assemble'
-    jdkVersionOption: '1.11'
     #publishJUnitResults: true 
     #testResultsFiles: '**/TEST-*.xml'
     #codeCoverageToolOption: 'None' # Optional. Options: none, cobertura, jaCoCo
