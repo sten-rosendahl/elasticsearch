@@ -4,6 +4,19 @@ trigger:
 pool:
   vmImage: 'ubuntu-latest'
 steps:
+- task: Gradle@2
+  inputs:
+    tasks: 'assemble'
+    #publishJUnitResults: true 
+    #testResultsFiles: '**/TEST-*.xml'
+    #codeCoverageToolOption: 'None' # Optional. Options: none, cobertura, jaCoCo
+    #codeCoverageClassFilesDirectories: 'build/classes/main/' # Required when codeCoverageToolOption == False
+    #codeCoverageFailIfEmpty: false # Optional
+    #sonarQubeRunAnalysis: false 
+    #sqGradlePluginVersionChoice: 'specify' # Required when sonarQubeRunAnalysis == True# Options: specify, build
+    #sonarQubeGradlePluginVersion: '2.6.1' # Required when sonarQubeRunAnalysis == True && SqGradlePluginVersionChoice == Specify
+    #checkStyleRunAnalysis: false # Optional
+    #findBugsRunAnalysis: false # Optional
 - task: WhiteSource Bolt@19
   inputs:
     advance: true
