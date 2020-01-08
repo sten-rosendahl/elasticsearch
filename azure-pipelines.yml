@@ -4,12 +4,10 @@ trigger:
 pool:
   vmImage: 'ubuntu-latest'
 steps:
-- task: JavaToolInstaller@0
-  inputs:
-    versionSpec: '11'
 - task: Gradle@2
   inputs:
     tasks: 'assemble'
+    jdkVersionOption: '1.11'
     #publishJUnitResults: true 
     #testResultsFiles: '**/TEST-*.xml'
     #codeCoverageToolOption: 'None' # Optional. Options: none, cobertura, jaCoCo
