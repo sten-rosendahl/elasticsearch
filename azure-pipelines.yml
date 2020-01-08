@@ -7,10 +7,10 @@ steps:
 - task: Gradle@2
   inputs:
     gradleWrapperFile: './gradlew'
-    tasks: '-p distribution/archives/no-jdk-linux-tar assemble'
+    tasks: '-p distribution/archives/no-jdk-linux-tar -x :generateGlobalBuildInfo assemble'
     gradleOptions: '-Xmx3072m -Dbuild.docker=false'
     javaHomeOption: 'JDKVersion'
-    jdkVersionOption: '1.13'
+    jdkVersionOption: '1.11'
     jdkArchitectureOption: 'x64'
     #publishJUnitResults: true 
     #testResultsFiles: '**/TEST-*.xml'
