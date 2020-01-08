@@ -10,7 +10,7 @@ steps:
     tasks: '-p distribution/archives/no-jdk-linux-tar assemble'
     gradleOptions: '-Xmx3072m -Dbuild.docker=false'
     javaHomeOption: 'JDKVersion'
-    jdkVersionOption: '1.11'
+    jdkVersionOption: '1.13'
     jdkArchitectureOption: 'x64'
     #publishJUnitResults: true 
     #testResultsFiles: '**/TEST-*.xml'
