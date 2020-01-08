@@ -8,6 +8,10 @@ steps:
   inputs:
     gradleWrapperFile: './gradlew'
     tasks: 'assemble'
+    gradleOptions: '-Xmx3072m'
+    javaHomeOption: 'JDKVersion'
+    jdkVersionOption: '1.11'
+    jdkArchitectureOption: 'x64'
     #publishJUnitResults: true 
     #testResultsFiles: '**/TEST-*.xml'
     #codeCoverageToolOption: 'None' # Optional. Options: none, cobertura, jaCoCo
